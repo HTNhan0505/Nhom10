@@ -38,6 +38,43 @@
         </header>
 
         <div id="slider">
+            <div class="slides">
+                <!-- radio button -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+    
+                <!-- slide img -->
+                <div class="slide first">
+                    <img src="./asets/image/Slider.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./asets/image/slider1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./asets/image/slider2.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./asets/image/Slider3.jpg" alt="">
+                </div>
+                <!-- automatic slide -->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+    
+    
+            </div>
+            <!-- manual navigation -->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
             <div class="slider__content">
                 <h1 class="slider__content-heading">Group 10</h1>
                 <div class="slide__content-intro">
@@ -46,8 +83,18 @@
                     <div class="slider__content-text">Nguyễn Tuấn Trung - 20161388</div>
                     <div class="slider__content-text">Nông quang Huy - 20110496</div>
                 </div>
-            </div>
+            </div> 
         </div>
+        <script type="text/javascript">
+            var counter = 2;
+            setInterval(function() {
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if(counter > 4) {
+                    counter = 1; 
+                }
+            }, 3000);
+        </script>
 
         <div id="app_content">
             <div class="grid wide app__container">
@@ -68,7 +115,7 @@
                             <img src="./asets/image/HuyQuang.jpg" alt="" class="app_container-profile-img">
                         </a>
                         <div class="app__content-body">
-                            <h3 class="app__container-profile-heading">Tên : Nông Quang Huy - 2011096</h3>
+                            <h3 class="app__container-profile-heading">Nông Quang Huy - 2011096 (leader)</h3>
                             <p class="app__container-profile-info">Sở thích : đá banh , đọc sách , chơi game</p>
                             <p class="app__container-profile-info">ước mơ : Có nhà lầu , xe hơi , vợ đẹp , con xinh.</p>
                         </div>
@@ -81,7 +128,7 @@
                             <img src="./asets/image/TuanTrung.jpg" alt="" class="app_container-profile-img">
                         </a>
                         <div class="app__content-body">
-                            <h3 class="app__container-profile-heading">Tên: Nguyễn Tuấn Trung - 20161388</h3>
+                            <h3 class="app__container-profile-heading">Nguyễn Tuấn Trung - 20161388</h3>
                             <p class="app__container-profile-info">Sở thích: nghe nhạc xem phim</p>
                             <p class="app__container-profile-info">Ước mơ: đi du lịch vòng quanh thế giới</p>
                         </div>
@@ -93,9 +140,7 @@
         
 
         <footer class="footer">
-            <div class="footer_content">
-                <span class="footer_content-text">Nhóm 10 môn lập trình web lớp 06CLC</span>
-            </div>
+            <span class="footer_content-text">Nhóm 10 môn lập trình web lớp 06CLC</span>
         </footer>
     </div>
 </body>
